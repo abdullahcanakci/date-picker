@@ -1,6 +1,13 @@
 {
-  "name": "date-picker",
-  "version": "0.0.0",
+  "name": "@acanakci/date-picker",
+  "description": "A custom react date picker with min-max and selection limits.",
+  "version": "0.1.1",
+  "author": {
+    "name": "Abdullah Çanakçı",
+    "email": "abdullahcanakci.0@gmail.com",
+    "url": "https://abdullahcanakci.org"
+  },
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -20,5 +27,11 @@
     "vite": "^2.5.4",
     "modern-normalize": "^1.1.0",
     "sass": "^1.39.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/date-picker.es.js",
+      "require": "./dist/date-picker.umd.js"
+    }
   }
 }
