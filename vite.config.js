@@ -11,7 +11,7 @@ export default defineConfig({
       name: 'DatePicker',
       fileName: format => `date-picker.${format}.js`
     } : undefined,
-    
+    sourcemap: true,
     rollupOptions: {
       external: ['react', 'react-dom']
     }
