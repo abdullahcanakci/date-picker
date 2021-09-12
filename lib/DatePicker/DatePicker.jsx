@@ -19,7 +19,7 @@ import {
 } from 'date-fns';
 import DatePickerEntry from './DatePickerEntry';
 
-const DatePicker = ({ defaultValue, onChange, minDate, maxDate, maxSelections = 2 }) => {
+export default function DatePicker ({ defaultValue = [], onChange, minDate, maxDate, maxSelections = 2 }) {
   const [activeMonth, setActiveMonth] = useState(new Date());
   const [selectedDates, setSelectedDates] = useState(defaultValue);
 
@@ -86,7 +86,7 @@ const DatePicker = ({ defaultValue, onChange, minDate, maxDate, maxSelections = 
       </button>
     </div>
   </div>;
-};
+}
 
 DatePicker.propTypes = {
   onChange: PropTypes.func.isRequired,
@@ -95,5 +95,3 @@ DatePicker.propTypes = {
   maxDate: PropTypes.instanceOf(Date),
   maxSelections: PropTypes.number
 };
- 
-export default DatePicker;

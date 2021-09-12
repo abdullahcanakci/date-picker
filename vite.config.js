@@ -13,7 +13,7 @@ export default defineConfig({
     } : undefined,
     sourcemap: true,
     rollupOptions: {
-      external: ['react', 'react-dom']
+      external: ['react']
     }
   },
   css: {

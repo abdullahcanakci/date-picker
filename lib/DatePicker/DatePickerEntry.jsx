@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import classNames from 'classnames';
 import styles from './DatePicker.module.scss';
 
-const DatePickerEntry = ({
+export default function DatePickerEntry ({
   label,
   type = 'radio',
   value, 
@@ -12,7 +12,7 @@ const DatePickerEntry = ({
   selected,
   disabled,
   ...props
-}) => {
+}) {
   const id = useMemo(() => `input-${name}-${Math.floor( Math.random() * 100000 )}`, [name] );
 
   return <div className={classNames(styles.datePickerEntryContainer, { 
@@ -25,6 +25,4 @@ const DatePickerEntry = ({
       <span className={styles.datePickerEntryDescription}>{description}</span>
     </label>
   </div>;
-};
- 
-export default DatePickerEntry;
+}
