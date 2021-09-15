@@ -13,7 +13,7 @@ export default defineConfig({
     } : undefined,
     sourcemap: true,
     rollupOptions: {
-      external: !process.env.BUILD_APP ? ['react'] : []
+      external: !process.env.BUILD_APP ? ['react', 'react-dom'] : []
     }
   },
   css: {
